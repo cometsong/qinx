@@ -1,0 +1,21 @@
+
+#  OSX ignores
+.DS_Store
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+
+#  Linux ignores
+!.gitignore
+*~
+
+
+#  Vim ignores
+.*.sw[a-z]
+*.un~
+Session.vim
+.VimballRecord
+
+tags
