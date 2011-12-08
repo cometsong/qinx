@@ -11,43 +11,43 @@
 
 
 <Job>
-<Job_Id>127262.palma001.palma.wwu</Job_Id>
-<Job_Name>mira_HUSEC001_draft.20111208-110009</Job_Name>
-<Job_Owner>bleopold@palma001.palma.wwu</Job_Owner>
-<resources_used>
-    <cput>00:31:46</cput>
-    <mem>10663276kb</mem>
-    <vmem>11088612kb</vmem>
-    <walltime>00:31:33</walltime>
-</resources_used>
-<job_state>R</job_state>
-<queue>default</queue>
-<server>palma001.palma.wwu</server>
-<Account_Name>e0hy</Account_Name>
-<Checkpoint>u</Checkpoint>
-<ctime>1323338422</ctime>
-<Error_Path>palma001.palma.wwu:/scratch/tmp/mellmann/hygiene/E.coli/HUSEC/mira_HUSEC001_draft.20111208-110009.e127262</Error_Path>
-<exec_host>palma341/11+palma341/10+palma341/9+palma341/8+palma341/7+palma341/6+palma341/5+palma341/4+palma341/3+palma341/2+palma341/1+palma341/0</exec_host>
-<Hold_Types>n</Hold_Types>
-<Join_Path>oe</Join_Path>
-<Keep_Files>n</Keep_Files>
-<Mail_Points>ae</Mail_Points>
-<Mail_Users>bleopold@uni-muenster.de</Mail_Users>
-<mtime>1323338423</mtime>
-<Output_Path>palma001:/scratch/tmp/mellmann/hygiene/E.coli/HUSEC/mira_HUSEC001_draft.20111208-110009.cluster_output.log</Output_Path>
-<Priority>0</Priority>
-<qtime>1323338422</qtime>
-<Rerunable>True</Rerunable>
-<Resource_List>
-    <nodect>1</nodect>
-    <nodes>1:himem:ppn=12</nodes>
-    <walltime>48:00:00</walltime>
-</Resource_List>
-<session_id>19655</session_id>
-<Variable_List>PBS_O_HOME=/home/b/bleopold,PBS_O_LANG=en_US.UTF-8,PBS_O_LOGNAME=bleopold,PBS_O_PATH=/home/b/bleopold/bin:/usr/local/bin:/home/b/bleopold/mira_config:/home/b/bleopold/bin:/usr/local/bin:/home/b/bleopold/mira_config:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/torque/bin:/usr/local/maui/bin:/opt/intel/Compiler/11.1/059/bin/intel64:/Applic.PALMA/mpi/intel/4.0.0.028/bin64/:/Applic.PALMA/git/1.7.1/bin/:/Applic.PALMA/topsi/TOPSI:/Applic.PALMA/MUMmer/MUMmer3.22:/Applic.PALMA/mira/intel/3.4.0/bin,PBS_O_MAIL=/var/spool/mail/bleopold,PBS_O_SHELL=zsh,PBS_O_HOST=palma001.palma.wwu,PBS_SERVER=palma001,PBS_O_WORKDIR=/scratch/tmp/mellmann/hygiene/E.coli/HUSEC,PBS_O_QUEUE=default</Variable_List>
-<etime>1323338422</etime>
-<submit_args>mira_job_mira_HUSEC001_draft.qcmd</submit_args>
-<start_time>1323338423</start_time>
-<start_count>1</start_count>
+    <Job_Id>127262.palma001.palma.wwu</Job_Id>
+    <Job_Name>mira_HUSEC001_draft.20111208-110009</Job_Name>
+    <Job_Owner>bleopold@palma001.palma.wwu</Job_Owner>
+    <resources_used>
+        <cput>00:31:46</cput>
+        <mem>10663276kb</mem>
+        <vmem>11088612kb</vmem>
+        <walltime>00:31:33</walltime>
+    </resources_used>
+    <job_state>R</job_state>
+    <queue>default</queue>
+    <server>palma001.palma.wwu</server>
+    <Account_Name>e0hy</Account_Name>
+    <Checkpoint>u</Checkpoint>
+    <ctime>1323338422</ctime>
+    <Error_Path>palma001.palma.wwu:/scratch/tmp/mellmann/hygiene/E.coli/HUSEC/mira_HUSEC001_draft.20111208-110009.e127262</Error_Path>
+    <exec_host>palma341/11+palma341/10+palma341/9+palma341/8+palma341/7+palma341/6+palma341/5+palma341/4+palma341/3+palma341/2+palma341/1+palma341/0</exec_host>
+    <Hold_Types>n</Hold_Types>
+    <Join_Path>oe</Join_Path>
+    <Keep_Files>n</Keep_Files>
+    <Mail_Points>ae</Mail_Points>
+    <Mail_Users>bleopold@uni-muenster.de</Mail_Users>
+    <mtime>1323338423</mtime>
+    <Output_Path>palma001:/scratch/tmp/mellmann/hygiene/E.coli/HUSEC/mira_HUSEC001_draft.20111208-110009.cluster_output.log</Output_Path>
+    <Priority>0</Priority>
+    <qtime>1323338422</qtime>
+    <Rerunable>True</Rerunable>
+    <Resource_List>
+        <nodect>1</nodect>
+        <nodes>1:himem:ppn=12</nodes>
+        <walltime>48:00:00</walltime>
+    </Resource_List>
+    <session_id>19655</session_id>
+    <Variable_List>PBS_O_HOME=/home/b/bleopold,PBS_O_LANG=en_US.UTF-8,PBS_O_LOGNAME=bleopold,PBS_O_PATH=/home/b/bleopold/bin:/usr/local/bin:/home/b/bleopold/mira_config:/home/b/bleopold/bin:/usr/local/bin:/home/b/bleopold/mira_config:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/torque/bin:/usr/local/maui/bin:/opt/intel/Compiler/11.1/059/bin/intel64:/Applic.PALMA/mpi/intel/4.0.0.028/bin64/:/Applic.PALMA/git/1.7.1/bin/:/Applic.PALMA/topsi/TOPSI:/Applic.PALMA/MUMmer/MUMmer3.22:/Applic.PALMA/mira/intel/3.4.0/bin,PBS_O_MAIL=/var/spool/mail/bleopold,PBS_O_SHELL=zsh,PBS_O_HOST=palma001.palma.wwu,PBS_SERVER=palma001,PBS_O_WORKDIR=/scratch/tmp/mellmann/hygiene/E.coli/HUSEC,PBS_O_QUEUE=default</Variable_List>
+    <etime>1323338422</etime>
+    <submit_args>mira_job_mira_HUSEC001_draft.qcmd</submit_args>
+    <start_time>1323338423</start_time>
+    <start_count>1</start_count>
 </Job>
 

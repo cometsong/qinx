@@ -11,6 +11,7 @@ use warnings;
 use XML::Simple;
 use Data::Dumper;
 
+# sample qstat XML output:
 
 my $XML_options = (
         ForceArray => 0
