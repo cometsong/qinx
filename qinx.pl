@@ -1,27 +1,26 @@
 #!/usr/bin/perl 
 #===============================================================================
 #         FILE: qstat_info.pl
-# REQUIREMENTS: qstat (tested with torque), XML::Simple, Carp
+# REQUIREMENTS: qstat (tested with torque), XML::Simple, Carp, Switch
 #       AUTHOR: B Leopold (cometsong)
-#      VERSION: 0.2
+#      VERSION: 0.6
 #      CREATED: 2011-12-08 12:01:40+0100
 #===============================================================================
 use strict;
 use warnings;
 use XML::Simple qw(:strict);
 use Switch;
-use Data::Dumper; # for Testing only
 use Carp;
+#use Data::Dumper; # for Testing only
 
 
 #------------------------------------------------------------------------------#
 #                               ... Variables ...                              #
 #------------------------------------------------------------------------------#
 my $debug = 0;
-my @job_owner_list = qw(bleopold );
+my @job_owner_list = qw(sleopold );
 
-# TODO add something to format_job_string to check for '->' or some other str to add xml sub-element
-# Note:  job_output_format =>  [xml_field_name,  length to display,  text_for_header]
+# Note:  job_output_format =>  ["xml_field_name",  length to display,  "text for header"]
 my $job_output_format = [ 
         ["Job_Id", 6, "Job Id"],
         ["Account_Name", 6, "Acct"],
@@ -50,15 +49,19 @@ my %XML_options = (
     );
 
 
-# TODO Testing/Developing Phase: use prior qstat-x output in file. 
-my $qxml = "qstat-fx.log";
-# TODO Production Phase: use system qstat-x call for current data.
-#my $qxml = system( "qstat -x" ) or croak "Cannot fetch \"qstat\" job information.";
-
+# Testing/Developing Phase: use prior qstat-x output in file. 
+#my $qxml = "qstat-fx.log";
+# Production Phase: use system qstat-x call for current data.
+my $qfilename = "./qinx.log";
+exec "qstat -x > $qfilename" or croak "Cannot fetch \"qstat\" job information.";
+my $qxml = read_file($qfilename) or croak "Cannot read job information file.";
 
 # Load full XML file into hash
-my $qXS = XML::Simple->new(%XML_options);
-my $qinx = $qXS->XMLin( $qxml );
+print "Fetching job list information.....", "\n";
+#my $qXS = XML::Simple->new(%XML_options);
+#my $qinx = $qXS->XMLin( $qxml );
+my $qinx = XMLin($qfilename, %XML_options);
+print "Job information loaded.", "\n";
 
 # Show entire hash of arrays
 #debug( Dumper( $qinx ) );
@@ -177,6 +180,22 @@ sub array2hash {
     my %new_hash;
     @new_hash{@arr_in}=(); # convert array list to hash for faster Key searching
     return %new_hash;
+}
+
+# open file by name, return filehandle scalar
+#   e.g. my $filehandle = fileopen(">".$filename);
+sub fileopen {
+    open my $fh, "@_"
+        or die "$0 : failed to open file '@_' : $!\n";
+    return $fh;
+}
+
+# return all contents read from passed filename
+sub read_file {
+    my ( $filename ) = @_;
+    my $fh = fileopen( "<" . $filename );
+    local $/;
+    return <$fh>;
 }
 
 # Prints out a debug message to STDOUT if $debug = 1
